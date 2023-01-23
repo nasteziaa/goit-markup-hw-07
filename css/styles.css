@@ -78,7 +78,7 @@ header .container {
   }
 }
 
-.header-list,
+
 .contacts,
 .logo,
 .nav-bottons {
@@ -274,8 +274,150 @@ p {
 
 /* Mobile Menu */
 
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
 
 
+
+
+
+
+.menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 40px;
+  padding-top: 80px;
+  background-color: var(--color-team-text);
+  z-index: 999;
+/* 
+  transform: translateX(100%); */
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.mobile-list {
+  margin-bottom: auto;
+
+}
+
+.mobile-list .link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: var(--color-dark);
+}
+
+.mobile-list-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-contacts-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-contacts {
+  margin-bottom: 48px;
+}
+
+.mobile-contacts-link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+.mobile-contacts-link.accent {
+  font-weight: 700;
+  font-size: 36px;
+line-height: 1.11;
+color: var(--color-primary-brand);
+
+}
+
+.mobile-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 56px;
+}
+
+.mobile-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-brand);
+  color: var(--color-team-text);
+  border-radius: 50%;
+}
+
+.mobile-social-link {
+  fill: currentColor
+}
+
+.mobile-social-icon {
+  width: 24px;
+  height: 24px;
+}
 
 /*----------------- Main--------------------- */
 
